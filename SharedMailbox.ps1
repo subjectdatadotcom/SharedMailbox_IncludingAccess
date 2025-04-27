@@ -80,7 +80,7 @@ function Resolve-Users {
 # Create a hash table for mappings
 $UserMap = @{}
 foreach ($entry in $Mappings) {
-    $UserMap[$entry.'NetApp Email/UPN'.ToLower()] = $entry.'Flexera UPN'
+    $UserMap[$entry.'Source Email/UPN'.ToLower()] = $entry.'Target UPN'
 }
 
 foreach ($mailbox in $SharedMailboxes) {
