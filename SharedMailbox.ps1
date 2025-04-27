@@ -20,7 +20,7 @@ Once the process is complete, the script disconnects from Exchange Online.
 .NOTES
 - The script requires administrative privileges in Exchange Online.
 - The `SharedMailboxes.csv` file must be located in the same directory as the script.
-- Output files (`ExistingSharedMailboxes.csv`, `SMB_Failures.csv`, and `UnmappedUsersReport.csv`) will be saved in the same directory.
+- Output files (`UnmappedUsersReport.csv`) will be saved in the same directory.
 - Ensure PowerShell execution policies allow the script to run.
 
 .AUTHOR
@@ -28,7 +28,7 @@ SubjectData
 
 .EXAMPLE
 .\CreateSharedMailboxes.ps1
-This will execute the script, processing the 'SharedMailboxes.csv' file, connecting to Exchange Online, and generating reports on created and existing mailboxes.
+This will execute the script, processing the 'SharedMailboxes.csv' file, connecting to Exchange Online, and generating reports on created mailboxes.
 #>
 
 if (-not (Get-Module -ListAvailable -Name ExchangeOnlineManagement)) {
